@@ -1,0 +1,11 @@
+{
+  "name": "cetak-ktp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

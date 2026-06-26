@@ -297,6 +297,6 @@ function sendJson(res, status, payload) {
   res.end(JSON.stringify(payload));
 }
 
-server.listen(port, "127.0.0.1", () => {
-  console.log(`KTP Threads card app: http://127.0.0.1:${port}/`);
+server.listen(port, "0.0.0.0", () => {
+  console.log(`KTP Threads card app listening on port ${port}`);
 });
