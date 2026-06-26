@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kartu Tanda Penduduk Threads</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="generatorPage" class="control-panel generator-page" aria-label="Generator kartu">
+        <div>
+          <p class="eyebrow">Republik Threads +62</p>
+          <h1>Kartu Tanda Penduduk Threads</h1>
+        </div>
+
+        <form id="generatorForm" class="generator-form">
+          <label for="username">Username Threads</label>
+          <div class="input-row">
+            <input id="username" name="username" autocomplete="off" placeholder="contoh: can_lotte" required />
+            <button type="submit">Generate</button>
+          </div>
+        </form>
+
+        <p id="statusText" class="status-text">Masukkan username. Dukcathread akan mencetak kartu threads anda.</p>
+        <div class="powered-by" aria-label="Powered by can_lotte">
+          <span>Powered by</span>
+          <img src="bendera-small.png" alt="" />
+          <a href="https://www.threads.com/@can_lotte" target="_blank" rel="noopener noreferrer">can_lotte</a>
+          <span class="credit-separator">credit by</span>
+          <a href="https://www.threads.com/@fauzi.frr" target="_blank" rel="noopener noreferrer">fauzi.frr</a>
+        </div>
+      </section>
+
+      <section id="cardPage" class="card-page" aria-label="Hasil kartu" hidden>
+        <div class="result-topbar">
+          <button id="newCard" type="button">Buat kartu lain</button>
+          <div class="toolbar" aria-label="Aksi kartu">
+            <button id="flipCard" type="button">Balik kartu</button>
+            <button id="printCard" type="button">Cetak</button>
+            <button id="downloadCard" type="button">Download sisi aktif</button>
+            <button id="downloadGif" type="button">Download GIF</button>
+          </div>
+          <p id="resultStatus" class="result-status" aria-live="polite"></p>
+        </div>
+
+        <section class="stage" aria-label="Pratinjau kartu">
+          <div id="cardDeck" class="card-deck" data-side="front">
+            <article id="frontCard" class="thread-card card-front">
+              <div class="card-pattern"></div>
+              <header class="card-header">
+                <div class="thread-mark" aria-hidden="true"><img class="threads-logo flag-image" src="bendera-small.png" alt="" /></div>
+                <div class="title-stack">
+                  <p>Republik Threads +62</p>
+                  <h2>Kartu Tanda Penduduk Threads</h2>
+                </div>
+              </header>
+
+              <div class="divider"><span></span></div>
+
+              <div class="front-layout">
+                <dl class="identity-list">
+                  <div class="identity-row nit-row">
+                    <dt>NIT</dt>
+                    <dd id="nitValue">69.76.3939.6624</dd>
+                  </div>
+                  <div class="identity-row">
+                    <dt>Username</dt>
+                    <dd id="usernameValue">@can_lotte</dd>
+                  </div>
+                  <div class="rank-strip">
+                    <span>Jabatan</span>
+                    <strong id="roleValue">Dirjen AI Sejer</strong>
+                  </div>
+                  <div class="identity-row">
+                    <dt>Pangkat</dt>
+                    <dd id="rankValue">Sersan Bot</dd>
+                  </div>
+                  <div class="xp-block">
+                    <div>
+                      <span>XP</span>
+                      <strong id="xpValue">47</strong>
+                    </div>
+                    <i id="xpBar" style="--value: 47%"></i>
+                  </div>
+                  <div class="identity-row">
+                    <dt>Golongan</dt>
+                    <dd id="groupValue">Tech Prophet FYP</dd>
+                  </div>
+                  <div class="identity-row">
+                    <dt>Jenis Warganet</dt>
+                    <dd id="citizenTypeValue">Pengamat Kode & Klik</dd>
+                  </div>
+                  <div class="identity-row">
+                    <dt>Domisili Algoritma</dt>
+                    <dd id="domicileValue">FYP Server Koneksi</dd>
+                  </div>
+                  <div class="identity-row">
+                    <dt>Kewarganegaraan</dt>
+                    <dd id="nationalityValue">Warga Threads +62</dd>
+                  </div>
+                  <div class="identity-row">
+                    <dt>Berlaku Hingga</dt>
+                    <dd id="validityValue">Berlaku s/d dapat verifikasi Google</dd>
+                  </div>
+                  <div class="identity-row motto-row">
+                    <dt>Motto</dt>
+                    <dd id="mottoValue">"Semua kode, satu tombol"</dd>
+                  </div>
+                </dl>
+
+                <aside class="photo-column">
+                  <div class="portrait-frame">
+                    <img id="profileImage" alt="Foto profil" />
+                    <span id="avatarFallback">CL</span>
+                  </div>
+                  <div class="stamp">Sah<br /><small>Seumur Hidup</small></div>
+                  <div class="qr-box" id="qrBox" aria-label="Kode profil"></div>
+                </aside>
+              </div>
+
+              <footer class="card-footer">
+                <img class="seal seal-image" src="stempel-small.png" alt="Stempel Threads" />
+                <div class="signature" id="signatureValue">Can Lotte</div>
+              </footer>
+            </article>
+
+            <article id="backCard" class="thread-card card-back">
+              <div class="card-pattern"></div>
+              <header class="card-header compact">
+                <div class="thread-mark" aria-hidden="true"><img class="threads-logo flag-image" src="bendera-small.png" alt="" /></div>
+                <div class="title-stack">
+                  <p>Bagian Belakang</p>
+                  <h2>Profil Warga Threads</h2>
+                </div>
+              </header>
+
+              <div class="back-grid">
+                <section class="power-box">
+                  <p>Frasa Sakti</p>
+                  <blockquote id="phraseValue">"Halo warga Threads. Saya AI agent yang ditugaskan bos saya."</blockquote>
+                </section>
+
+                <section class="badges" id="badgeList"></section>
+
+                <section class="stat-grid" id="statList"></section>
+
+                <section class="notes">
+                  <p id="noteValue">Catatan Petugas: Akun ini lebih suka nge-debug daripada nge-gossip.</p>
+                  <p id="fortuneValue">Ramalan: Minggu ini akan menemukan cara baru nge-repost tanpa rate limit.</p>
+                </section>
+              </div>
+
+              <footer class="back-footer">
+                <span id="profileUrl">https://www.threads.net/@can_lotte</span>
+                <span>Kartu ini dibuat otomatis dari username.</span>
+              </footer>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div id="followModal" class="follow-modal" hidden>
+      <div class="follow-dialog" role="dialog" aria-modal="true" aria-labelledby="followTitle">
+        <button id="closeFollowModal" class="modal-close" type="button" aria-label="Tutup">×</button>
+        <div class="modal-logo"><img src="bendera-small.png" alt="" /></div>
+        <p class="eyebrow">Syarat Download</p>
+        <h2 id="followTitle">Follow @can_lotte dulu</h2>
+        <p class="follow-copy">Untuk melanjutkan download kartu, follow akun Threads pembuat dulu. Setelah membuka profil, kembali ke sini untuk mulai download.</p>
+        <div class="modal-actions">
+          <button id="followAccount" type="button">Follow @can_lotte</button>
+          <button id="continueDownload" type="button" disabled>Saya sudah follow</button>
+        </div>
+        <p id="followHint" class="follow-hint">Tombol download akan aktif setelah profil dibuka.</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
